@@ -1,16 +1,7 @@
 import { lessonTimes } from '../config'
 import { checkLessonOnWeekNotCompatibility } from './check_lesson_on_week_not_compatibility.helper'
 import { getTodaysSchedule } from './get_todays_schedule_iterrows.helper'
-
-function getText(text: string, variable: string, type = 'default') {
-	if (variable == null || variable === '') {
-		return ''
-	}
-
-	const varText = type !== 'link' ? variable : `<a href="${variable}">link</a>`
-
-	return `${text}: ${varText}\n`
-}
+import { getText } from './get_text.helper'
 
 export function getPairsByWeekDay(
 	weekDay: number,

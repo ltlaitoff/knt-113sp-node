@@ -1,14 +1,5 @@
 import { data } from '../config'
-
-function getText(text: string, variable: string, type = 'default') {
-	if (variable === null || variable === undefined) {
-		return ''
-	}
-
-	const varText = type !== 'link' ? variable : `<a href="${variable}">link</a>`
-
-	return `${text}: ${varText}\n`
-}
+import { getText } from '../helpers/get_text.helper'
 
 export function getAllController() {
 	const text: string[] = []
