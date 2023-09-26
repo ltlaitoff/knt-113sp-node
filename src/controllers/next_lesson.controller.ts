@@ -7,7 +7,7 @@ import { getLessonMessageByLesson } from '../helpers/get_lesson_message_by_lesso
 import { DataElement } from 'src/types/DataElement.type'
 
 export function nextLessonController() {
-	const now = new Date()
+	const now = new Date(Date.now() + 3 * 60 * 60 * 1000)
 	const currentYear = now.getFullYear()
 	const currentMonth = now.getMonth() + 1
 	const currentDay = now.getDate()
@@ -51,6 +51,19 @@ export function nextLessonController() {
 			currentDay,
 			...timeEnd.split(':').map(Number)
 		)
+
+		console.log(
+			'startDatetime %c⧭',
+			'color: #00e600',
+			startDatetime.toLocaleTimeString('en-GB')
+		)
+		console.log(
+			'endDatetime %c⧭',
+			'color: #00a3cc',
+			endDatetime.toLocaleTimeString('en-GB')
+		)
+		console.log('now %c⧭', 'color: #aa00ff', now.toLocaleTimeString('en-GB'))
+		console.log('---')
 
 		if (
 			now.getTime() >= startDatetime.getTime() &&
