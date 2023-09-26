@@ -3,8 +3,8 @@
 	"description": "Telegram trainings bot fo League of Legends",
 	"version": "0.0.0-alpha1",
 	"scripts": {
-		"start": "ts-node api/polling.ts",
-		"dev": "nodemon",
+		"start": "MODE='dev' ts-node api/polling.ts",
+		"dev": "MODE='dev' nodemon",
 		"build": "tsc",
 		"test": "jest",
 		"lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
