@@ -1,0 +1,16 @@
+{
+	"version": 2,
+	"functions": {
+		"api/bot.ts": {
+			"memory": 1024,
+			"maxDuration": 10
+		}
+	},
+	"routes": [
+		{
+			"src": "/(.*)",
+			"dest": "api/bot.ts",
+			"methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+		}
+	]
+}
