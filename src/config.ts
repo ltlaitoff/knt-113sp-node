@@ -1,6 +1,6 @@
 import { data } from './data'
 
-const LINK_TO_REP = 'https://github.com/ltlaitoff/ktnsp_bot'
+const LINK_TO_REP = 'https://github.com/ltlaitoff/knt-113sp-node'
 
 const lessonTimes = [
 	['08:30', '09:50'],
