@@ -52,12 +52,15 @@ export function nextLessonController() {
 			...timeEnd.split(':').map(Number)
 		)
 
-		if (now >= startDatetime && now <= endDatetime) {
+		if (
+			now.getTime() >= startDatetime.getTime() &&
+			now.getTime() <= endDatetime.getTime()
+		) {
 			pairNow = true
 			lesson = row
 		}
 
-		if (now <= startDatetime) {
+		if (now.getTime() <= startDatetime.getTime()) {
 			lesson = row
 		}
 	}
