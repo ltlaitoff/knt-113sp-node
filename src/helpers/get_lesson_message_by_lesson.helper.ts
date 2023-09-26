@@ -1,10 +1,11 @@
 import { getLessonMessage } from './get_lesson_message.helper'
+import { DataElement } from 'src/types/DataElement.type'
 
 export function getLessonMessageByLesson(
-	timeStart: any,
-	timeEnd: any,
-	lesson: any,
-	customSubjectName: any
+	timeStart: string,
+	timeEnd: string,
+	lesson: DataElement,
+	customSubjectName: string
 ) {
 	return getLessonMessage(
 		timeStart,

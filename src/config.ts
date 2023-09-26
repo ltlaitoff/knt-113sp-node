@@ -1,4 +1,4 @@
-import data from './data/data.json'
+import { data } from './data'
 
 const LINK_TO_REP = 'https://github.com/ltlaitoff/ktnsp_bot'
 

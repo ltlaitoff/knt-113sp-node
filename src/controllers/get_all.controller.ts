@@ -1,8 +1,6 @@
-// import pandas
-// from src.config import data
 import { data } from '../config'
 
-function getText(text: any, variable: any, type = 'default') {
+function getText(text: string, variable: string, type = 'default') {
 	if (variable === null || variable === undefined) {
 		return ''
 	}
@@ -13,24 +11,17 @@ function getText(text: any, variable: any, type = 'default') {
 }
 
 export function getAllController() {
-	const text: any[] = []
+	const text: string[] = []
 
 	for (const row of data) {
-		const dayOfWeek = row['day_of_the_week']
-		const period = row['period']
 		const typeLesson = row['type_lesson']
 		const subject = row['subject']
 		const teacher = row['teacher']
 		const meetingLink = row['meeting_link']
-		const zoomCode = row['zoom_code']
-		const zoomPassword = row['zoom_password']
 		const linkToPlatform = row['link_to_platform']
 		const email = row['email']
 		const telegram = row['telegram']
 		const additionalText = row['additional_text']
-		let type = row['type']
-
-		type = type ? 'Знаменник' : 'Чисельник'
 
 		let smileType = ''
 

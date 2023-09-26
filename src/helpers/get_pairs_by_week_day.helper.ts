@@ -2,7 +2,7 @@ import { lessonTimes } from '../config'
 import { checkLessonOnWeekNotCompatibility } from './check_lesson_on_week_not_compatibility.helper'
 import { getTodaysSchedule } from './get_todays_schedule_iterrows.helper'
 
-function getText(text: any, variable: any, type = 'default') {
+function getText(text: string, variable: string, type = 'default') {
 	if (variable == null || variable === '') {
 		return ''
 	}
@@ -13,7 +13,7 @@ function getText(text: any, variable: any, type = 'default') {
 }
 
 export function getPairsByWeekDay(
-	weekDay: any,
+	weekDay: number,
 	next = false,
 	detailed = false
 ) {

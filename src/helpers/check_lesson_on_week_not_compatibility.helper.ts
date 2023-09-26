@@ -1,8 +1,9 @@
+import { LessonType } from 'src/types/LessonType.type'
 import { getCurrentWeekType } from './get_current_week_type.helper'
 
 export function checkLessonOnWeekNotCompatibility(
-	lessonType: any,
-	subject: any,
+	lessonType: LessonType,
+	subject: string,
 	next = false
 ) {
 	let currentWeekType = getCurrentWeekType()
