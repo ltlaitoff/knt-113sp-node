@@ -55,14 +55,14 @@ export function nextLessonController() {
 		console.log(
 			'startDatetime %c⧭',
 			'color: #00e600',
-			startDatetime.toLocaleTimeString('en-GB')
+			startDatetime.toLocaleTimeString()
 		)
 		console.log(
 			'endDatetime %c⧭',
 			'color: #00a3cc',
-			endDatetime.toLocaleTimeString('en-GB')
+			endDatetime.toLocaleTimeString()
 		)
-		console.log('now %c⧭', 'color: #aa00ff', now.toLocaleTimeString('en-GB'))
+		console.log('now %c⧭', 'color: #aa00ff', now.toLocaleTimeString())
 		console.log('---')
 
 		if (
@@ -83,7 +83,7 @@ export function nextLessonController() {
 			timeStart,
 			timeEnd,
 			lesson,
-			'<u><b>Зараз пара</b></u>' + (pairNow ? '🔥' : '🔜')
+			pairNow ? '<u><b>Зараз пара</b></u>🔥' : 'Наступна пара🔜'
 		)
 
 		return textForSend
