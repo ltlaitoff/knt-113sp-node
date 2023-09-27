@@ -7,7 +7,7 @@ import { getLessonMessageByLesson } from '../helpers/get_lesson_message_by_lesso
 import { DataElement } from 'src/types/DataElement.type'
 
 export function nextLessonController() {
-	const now = new Date(Date.now() + 3 * 60 * 60 * 1000)
+	const now = new Date(Date.now())
 	const currentYear = now.getFullYear()
 	const currentMonth = now.getMonth() + 1
 	const currentDay = now.getDate()
