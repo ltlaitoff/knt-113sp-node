@@ -14,6 +14,7 @@ import type { ParseModeFlavor } from '@grammyjs/parse-mode'
 
 const ENV_PATH = process.env.MODE === 'dev' ? '.env.dev' : '.env'
 config({ path: ENV_PATH })
+process.env.TZ = 'Europe/Kyiv'
 
 const bot = new Bot<ParseModeFlavor<Context>>(process.env.TELEGRAM_BOT_TOKEN)
 
