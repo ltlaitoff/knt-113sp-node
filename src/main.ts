@@ -8,7 +8,7 @@ import {
 	nextWeekScheduleComposer,
 	weekScheduleComposer
 } from './handlers'
-
+import { setBotCommands } from './utils/set-bot-commands.util'
 import { hydrateReply, parseMode } from '@grammyjs/parse-mode'
 import type { ParseModeFlavor } from '@grammyjs/parse-mode'
 
@@ -27,5 +27,7 @@ bot.use(getAllComposer)
 bot.use(nextLessonComposer)
 bot.use(nextWeekScheduleComposer)
 bot.use(weekScheduleComposer)
+
+setBotCommands(bot)
 
 export default bot
