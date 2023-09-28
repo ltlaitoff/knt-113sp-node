@@ -15,4 +15,16 @@ dailyScheduleComposer.command('daily_schedule_detailed', ctx => {
 	})
 })
 
+dailyScheduleComposer.command('next_daily_schedule', ctx => {
+	ctx.reply(dailyScheduleController(false, true), {
+		disable_web_page_preview: true
+	})
+})
+
+dailyScheduleComposer.command('next_daily_schedule_detailed', ctx => {
+	ctx.reply(dailyScheduleController(true, true), {
+		disable_web_page_preview: true
+	})
+})
+
 export { dailyScheduleComposer }

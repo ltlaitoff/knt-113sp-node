@@ -13,6 +13,12 @@ export async function setBotCommands(
 			command: 'daily_schedule_detailed',
 			description: 'Пари на день детально'
 		},
+		{ command: 'next_daily_schedule', description: 'Пари на наступний день' },
+		{
+			command: 'next_daily_schedule_detailed',
+			description: 'Пари на наступний день детально'
+		},
+
 		{ command: 'week_schedule', description: 'Розклад на тиждень' },
 		{
 			command: 'next_week_schedule',
