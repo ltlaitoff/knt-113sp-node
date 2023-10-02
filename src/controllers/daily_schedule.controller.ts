@@ -1,21 +1,26 @@
 import { checkWeekDayInData } from '../helpers/check_week_day_in_data.helper'
-import { getCurrentWeekDay } from '../helpers/get_current_week_day.helper'
 import { getLessonTypeText } from '../helpers/get_lesson_type_text.helper'
 import { getPairsByWeekDay } from '../helpers/get_pairs_by_week_day.helper'
 
 export function dailyScheduleController(detailed = false, next = false) {
-	const baseWeekDay = getCurrentWeekDay()
-	const weekDay = baseWeekDay + (next ? 1 : 0)
+	const nowDate = new Date()
+
+	const baseWeekDay = nowDate.getDay()
+
+	nowDate.setDate(nowDate.getDate() + (next ? 1 : 0))
+	const weekDay = nowDate.getDay()
 	const nextWeek = next && baseWeekDay === 0
 
 	if (checkWeekDayInData(weekDay)) {
 		return 'Пар немає'
 	}
 
+	const dateString = nowDate.toLocaleDateString('en-GB')
+
 	return (
-		`Розклад на ${next ? 'завтра' : 'сьогодні'} (` +
+		`Розклад на ${next ? 'завтра' : 'сьогодні'} (${dateString}), ` +
 		getLessonTypeText(nextWeek) +
-		'):\n' +
+		':\n' +
 		getPairsByWeekDay(weekDay, nextWeek, detailed)
 	)
 }
