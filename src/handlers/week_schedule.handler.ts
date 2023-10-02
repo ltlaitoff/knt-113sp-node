@@ -9,4 +9,10 @@ weekScheduleComposer.command('week_schedule', ctx => {
 	})
 })
 
+weekScheduleComposer.command('next_week_schedule', ctx => {
+	ctx.reply(weekScheduleController(true), {
+		disable_web_page_preview: true
+	})
+})
+
 export { weekScheduleComposer }

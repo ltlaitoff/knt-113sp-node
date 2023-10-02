@@ -5,7 +5,6 @@ import {
 	dailyScheduleComposer,
 	getAllComposer,
 	nextLessonComposer,
-	nextWeekScheduleComposer,
 	weekScheduleComposer
 } from './handlers'
 import { setBotCommands } from './utils/set-bot-commands.util'
@@ -25,7 +24,6 @@ bot.use(basicComposer)
 bot.use(dailyScheduleComposer)
 bot.use(getAllComposer)
 bot.use(nextLessonComposer)
-bot.use(nextWeekScheduleComposer)
 bot.use(weekScheduleComposer)
 
 setBotCommands(bot)
