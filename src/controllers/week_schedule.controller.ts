@@ -25,7 +25,10 @@ export function weekScheduleController(next = false) {
 	let scheduleText = ''
 
 	for (let day = 1; day <= 6; day++) {
-		scheduleText += `${DAY_NAMES[day - 1]}:\n${getPairsByWeekDay(day, next)}\n`
+		scheduleText += `${DAY_NAMES[day - 1]}:\n${getPairsByWeekDay(
+			day,
+			next
+		)}\n\n`
 	}
 
 	return weekText + scheduleText
