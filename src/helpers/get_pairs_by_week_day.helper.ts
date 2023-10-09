@@ -64,7 +64,7 @@ export function getPairsByWeekDay(
 	}
 
 	if (text.length === 0) {
-		return 'Пар немає\n'
+		return 'Пар немає'
 	}
 
 	if (detailed) {
