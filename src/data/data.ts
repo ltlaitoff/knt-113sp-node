@@ -113,7 +113,7 @@ const data: DataElement[] = [
 	{
 		day_of_the_week: 3,
 		period: 2,
-		type_lesson: 'ЛБ',
+		type_lesson: 'ЛК',
 		subject: 'ВТтаВД. Веб технології та веб дизайн',
 		teacher: 'Леощенко Сергій Дмитрович',
 		meeting_link: 'https://meet.google.com/igt-rmni-ftk',
@@ -147,7 +147,7 @@ const data: DataElement[] = [
 		type_lesson: 'ПР',
 		subject: 'УМПС. Українська мова за професійним спрямуванням',
 		teacher: 'Ольга Анатоліївна Чумаченко',
-		meeting_link: '',
+		meeting_link: 'https://meet.google.com/unm-gaqn-isr',
 		zoom_code: '',
 		zoom_password: '',
 		link_to_platform: '',
